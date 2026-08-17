@@ -1,0 +1,19 @@
+{
+  "name": "imai-style-8vessels",
+  "n_cranes": 6,
+  "berths": [
+    {"id": "B1", "name": "Berth-1", "length_m": 280, "depth_m": 12, "position_m": 0},
+    {"id": "B2", "name": "Berth-2", "length_m": 320, "depth_m": 13, "position_m": 320},
+    {"id": "B3", "name": "Berth-3", "length_m": 360, "depth_m": 14, "position_m": 680}
+  ],
+  "vessels": [
+    {"id": "V1", "eta": 0.0, "moves": 320, "priority": 2, "length": 210, "draft": 10.5, "preferred": "B1"},
+    {"id": "V2", "eta": 1.5, "moves": 480, "priority": 3, "length": 260, "draft": 11.8},
+    {"id": "V3", "eta": 3.0, "moves": 640, "priority": 1, "length": 330, "draft": 14.2, "preferred": "B3"},
+    {"id": "V4", "eta": 4.5, "moves": 260, "priority": 4, "length": 170, "draft": 8.2},
+    {"id": "V5", "eta": 6.0, "moves": 540, "priority": 2, "length": 250, "draft": 11.0},
+    {"id": "V6", "eta": 7.5, "moves": 720, "priority": 3, "length": 340, "draft": 14.8},
+    {"id": "V7", "eta": 9.0, "moves": 300, "priority": 5, "length": 190, "draft": 9.4},
+    {"id": "V8", "eta": 10.5, "moves": 460, "priority": 2, "length": 240, "draft": 10.8, "preferred": "B2"}
+  ]
+}
