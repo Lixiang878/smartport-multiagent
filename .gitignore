@@ -1,0 +1,29 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.eggs/
+
+# 测试与工具缓存
+.pytest_cache/
+.flake8
+.mypy_cache/
+htmlcov/
+.coverage
+
+# 运行输出（演示产物）
+examples/output/
+
+# 日志
+logs/
+*.log
+
+# IDE
+.idea/
+.vscode/
+
+# 系统
+.DS_Store
+Thumbs.db
