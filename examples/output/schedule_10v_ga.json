@@ -1,0 +1,480 @@
+{
+  "mode": "ga",
+  "berth_plan": [
+    {
+      "vessel_id": "V002",
+      "berth_id": "B1",
+      "start": 1.32,
+      "end": 6.891429,
+      "planned_end": 6.891428571428572,
+      "wait_hours": 0.0,
+      "service_hours": 5.571429
+    },
+    {
+      "vessel_id": "V009",
+      "berth_id": "B1",
+      "start": 7.09,
+      "end": 9.496593,
+      "planned_end": 9.496593406593407,
+      "wait_hours": 0.0,
+      "service_hours": 2.406593
+    },
+    {
+      "vessel_id": "V001",
+      "berth_id": "B1",
+      "start": 9.496593406593407,
+      "end": 12.546044,
+      "planned_end": 12.546043956043956,
+      "wait_hours": 0.946593,
+      "service_hours": 3.049451
+    },
+    {
+      "vessel_id": "V006",
+      "berth_id": "B2",
+      "start": 3.65,
+      "end": 5.875275,
+      "planned_end": 5.875274725274725,
+      "wait_hours": 0.0,
+      "service_hours": 2.225275
+    },
+    {
+      "vessel_id": "V008",
+      "berth_id": "B2",
+      "start": 5.875274725274725,
+      "end": 10.062088,
+      "planned_end": 10.062087912087911,
+      "wait_hours": 0.875275,
+      "service_hours": 4.186813
+    },
+    {
+      "vessel_id": "V010",
+      "berth_id": "B2",
+      "start": 10.312088,
+      "end": 12.29011,
+      "planned_end": 12.040109890109889,
+      "wait_hours": 1.372088,
+      "service_hours": 1.978022
+    },
+    {
+      "vessel_id": "V004",
+      "berth_id": "B2",
+      "start": 12.29011,
+      "end": 19.097802,
+      "planned_end": 18.847802197802196,
+      "wait_hours": 7.72011,
+      "service_hours": 6.807692
+    },
+    {
+      "vessel_id": "V007",
+      "berth_id": "B3",
+      "start": 0.73,
+      "end": 3.565165,
+      "planned_end": 3.5651648351648353,
+      "wait_hours": 0.0,
+      "service_hours": 2.835165
+    },
+    {
+      "vessel_id": "V005",
+      "berth_id": "B3",
+      "start": 8.99,
+      "end": 13.259231,
+      "planned_end": 13.259230769230768,
+      "wait_hours": 0.0,
+      "service_hours": 4.269231
+    },
+    {
+      "vessel_id": "V003",
+      "berth_id": "B3",
+      "start": 13.259230769230768,
+      "end": 22.803187,
+      "planned_end": 22.803186813186812,
+      "wait_hours": 6.569231,
+      "service_hours": 9.543956
+    }
+  ],
+  "crane_plan": [
+    {
+      "crane_id": "QC1",
+      "vessel_id": "V002",
+      "berth_id": "B1",
+      "start": 1.32,
+      "end": 6.891429,
+      "moves": 173
+    },
+    {
+      "crane_id": "QC1",
+      "vessel_id": "V009",
+      "berth_id": "B1",
+      "start": 7.09,
+      "end": 9.496593,
+      "moves": 74
+    },
+    {
+      "crane_id": "QC1",
+      "vessel_id": "V001",
+      "berth_id": "B1",
+      "start": 9.496593406593407,
+      "end": 12.546044,
+      "moves": 94
+    },
+    {
+      "crane_id": "QC1",
+      "vessel_id": "V003",
+      "berth_id": "B3",
+      "start": 13.259230769230768,
+      "end": 22.803187,
+      "moves": 296
+    },
+    {
+      "crane_id": "QC2",
+      "vessel_id": "V002",
+      "berth_id": "B1",
+      "start": 1.32,
+      "end": 6.891429,
+      "moves": 173
+    },
+    {
+      "crane_id": "QC2",
+      "vessel_id": "V009",
+      "berth_id": "B1",
+      "start": 7.09,
+      "end": 9.496593,
+      "moves": 75
+    },
+    {
+      "crane_id": "QC2",
+      "vessel_id": "V001",
+      "berth_id": "B1",
+      "start": 9.496593406593407,
+      "end": 12.546044,
+      "moves": 95
+    },
+    {
+      "crane_id": "QC2",
+      "vessel_id": "V003",
+      "berth_id": "B3",
+      "start": 13.259230769230768,
+      "end": 22.803187,
+      "moves": 297
+    },
+    {
+      "crane_id": "QC3",
+      "vessel_id": "V006",
+      "berth_id": "B2",
+      "start": 3.65,
+      "end": 5.875275,
+      "moves": 66
+    },
+    {
+      "crane_id": "QC3",
+      "vessel_id": "V005",
+      "berth_id": "B3",
+      "start": 8.99,
+      "end": 13.259231,
+      "moves": 128
+    },
+    {
+      "crane_id": "QC4",
+      "vessel_id": "V007",
+      "berth_id": "B3",
+      "start": 0.73,
+      "end": 3.565165,
+      "moves": 85
+    },
+    {
+      "crane_id": "QC4",
+      "vessel_id": "V006",
+      "berth_id": "B2",
+      "start": 3.65,
+      "end": 5.875275,
+      "moves": 66
+    },
+    {
+      "crane_id": "QC4",
+      "vessel_id": "V005",
+      "berth_id": "B3",
+      "start": 8.99,
+      "end": 13.259231,
+      "moves": 128
+    },
+    {
+      "crane_id": "QC5",
+      "vessel_id": "V007",
+      "berth_id": "B3",
+      "start": 0.73,
+      "end": 3.565165,
+      "moves": 84
+    },
+    {
+      "crane_id": "QC5",
+      "vessel_id": "V008",
+      "berth_id": "B2",
+      "start": 5.875274725274725,
+      "end": 10.062088,
+      "moves": 124
+    },
+    {
+      "crane_id": "QC5",
+      "vessel_id": "V010",
+      "berth_id": "B2",
+      "start": 10.312088,
+      "end": 12.29011,
+      "moves": 58
+    },
+    {
+      "crane_id": "QC5",
+      "vessel_id": "V004",
+      "berth_id": "B2",
+      "start": 12.29011,
+      "end": 19.097802,
+      "moves": 202
+    },
+    {
+      "crane_id": "QC6",
+      "vessel_id": "V008",
+      "berth_id": "B2",
+      "start": 5.875274725274725,
+      "end": 10.062088,
+      "moves": 125
+    },
+    {
+      "crane_id": "QC6",
+      "vessel_id": "V010",
+      "berth_id": "B2",
+      "start": 10.312088,
+      "end": 12.29011,
+      "moves": 59
+    },
+    {
+      "crane_id": "QC6",
+      "vessel_id": "V004",
+      "berth_id": "B2",
+      "start": 12.29011,
+      "end": 19.097802,
+      "moves": 203
+    }
+  ],
+  "yard_plan": [
+    {
+      "vessel_id": "V007",
+      "block_id": "YE01",
+      "bays_used": [
+        0,
+        1,
+        2,
+        0,
+        1,
+        2,
+        3,
+        4
+      ],
+      "import_containers": 68,
+      "export_containers": 104,
+      "reshuffles": 0,
+      "shared_bays": 0
+    },
+    {
+      "vessel_id": "V002",
+      "block_id": "YE02",
+      "bays_used": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ],
+      "import_containers": 135,
+      "export_containers": 203,
+      "reshuffles": 0,
+      "shared_bays": 0
+    },
+    {
+      "vessel_id": "V006",
+      "block_id": "YOVERFLOW_EXPORT",
+      "bays_used": [
+        0,
+        1,
+        0,
+        1,
+        2
+      ],
+      "import_containers": 54,
+      "export_containers": 81,
+      "reshuffles": 0,
+      "shared_bays": 0
+    },
+    {
+      "vessel_id": "V008",
+      "block_id": "YE01",
+      "bays_used": [
+        3,
+        4,
+        5,
+        6,
+        7,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11
+      ],
+      "import_containers": 101,
+      "export_containers": 153,
+      "reshuffles": 0,
+      "shared_bays": 0
+    },
+    {
+      "vessel_id": "V009",
+      "block_id": "YE02",
+      "bays_used": [
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12
+      ],
+      "import_containers": 58,
+      "export_containers": 88,
+      "reshuffles": 0,
+      "shared_bays": 0
+    },
+    {
+      "vessel_id": "V005",
+      "block_id": "YOVERFLOW_EXPORT",
+      "bays_used": [
+        2,
+        3,
+        4,
+        3,
+        4,
+        5,
+        6
+      ],
+      "import_containers": 103,
+      "export_containers": 156,
+      "reshuffles": 0,
+      "shared_bays": 0
+    },
+    {
+      "vessel_id": "V001",
+      "block_id": "YE01",
+      "bays_used": [
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "import_containers": 74,
+      "export_containers": 111,
+      "reshuffles": 0,
+      "shared_bays": 0
+    },
+    {
+      "vessel_id": "V010",
+      "block_id": "YE02",
+      "bays_used": [
+        9,
+        10,
+        13,
+        14,
+        15
+      ],
+      "import_containers": 48,
+      "export_containers": 72,
+      "reshuffles": 0,
+      "shared_bays": 0
+    },
+    {
+      "vessel_id": "V004",
+      "block_id": "YOVERFLOW_EXPORT",
+      "bays_used": [
+        5,
+        6,
+        7,
+        8,
+        9,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13
+      ],
+      "import_containers": 165,
+      "export_containers": 248,
+      "reshuffles": 0,
+      "shared_bays": 0
+    },
+    {
+      "vessel_id": "V003",
+      "block_id": "YE01",
+      "bays_used": [
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        11,
+        12,
+        17,
+        18,
+        19,
+        16,
+        17,
+        18,
+        19,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19
+      ],
+      "import_containers": 231,
+      "export_containers": 348,
+      "reshuffles": 0,
+      "shared_bays": 0
+    }
+  ],
+  "kpi": {
+    "n_vessels": 10,
+    "avg_wait_hours": 1.7483297,
+    "max_wait_hours": 7.72011,
+    "avg_port_time_hours": 6.0356924,
+    "weighted_port_time_hours": 7.490864461538461,
+    "total_reshuffles": 0,
+    "reshuffles_per_1000": 0.0,
+    "crane_utilization": 0.6267198103917244,
+    "berth_utilization": 0.6267198089460039,
+    "makespan_hours": 22.803187,
+    "crane_moves_count": 6,
+    "solve_seconds": 0.9115771999931894
+  },
+  "notes": [
+    "final review: berth plan consistent"
+  ],
+  "created_at": "2026-08-17T16:23:28.289355+00:00"
+}
