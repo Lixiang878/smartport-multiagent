@@ -1,0 +1,21 @@
+{
+  "name": "smartport-40v",
+  "description": "标准算例：40 船 / 5 泊位 / 12 岸桥，高峰聚簇到港（demo_full 使用）",
+  "generate": {
+    "name": "smartport-40v",
+    "n_vessels": 40,
+    "n_berths": 5,
+    "n_cranes": 12,
+    "n_import_blocks": 5,
+    "n_export_blocks": 3,
+    "size_profile": "large_port",
+    "eta_span_hours": 30.0,
+    "peak_ratio": 0.6,
+    "peak_window": [8.0, 20.0],
+    "horizon_hours": 72.0,
+    "seed": 7,
+    "block_bays": 28,
+    "block_stacks_per_bay": 8,
+    "block_tiers": 5
+  }
+}
