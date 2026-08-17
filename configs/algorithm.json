@@ -1,0 +1,25 @@
+{
+  "algorithm": {
+    "ga": {
+      "population": 50,
+      "generations": 60,
+      "p_crossover": 0.9,
+      "p_mut_base": 0.15,
+      "elite_size": 4,
+      "order_mut": "swap"
+    },
+    "mip": {
+      "time_limit": 25.0,
+      "pref_penalty": 2.0,
+      "gap_rel": 0.02
+    },
+    "crane": {
+      "max_q_per_vessel": 4,
+      "borrow_back": true,
+      "idle_retry_hours": 0.25
+    },
+    "yard": {
+      "import_dwell_hours": 1000000
+    }
+  }
+}
