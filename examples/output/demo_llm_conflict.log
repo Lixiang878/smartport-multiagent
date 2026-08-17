@@ -1,0 +1,44 @@
+{"ts": "2026-08-16T17:52:18.796091+00:00", "level": "INFO", "agent": "smartport.board", "message": "board: [simulation] section='scenario' updated by 'simulation' (v1)"}
+{"ts": "2026-08-16T17:52:18.797107+00:00", "level": "INFO", "agent": "smartport.agent.orchestrator", "message": "agent started"}
+{"ts": "2026-08-16T17:52:18.797107+00:00", "level": "INFO", "agent": "smartport.agent.berth_agent", "message": "agent started"}
+{"ts": "2026-08-16T17:52:18.797107+00:00", "level": "INFO", "agent": "smartport.agent.crane_agent", "message": "agent started"}
+{"ts": "2026-08-16T17:52:18.797107+00:00", "level": "INFO", "agent": "smartport.agent.yard_agent", "message": "agent started"}
+{"ts": "2026-08-16T17:52:18.798107+00:00", "level": "INFO", "agent": "smartport.agent.conflict_agent", "message": "agent started"}
+{"ts": "2026-08-16T17:52:18.799629+00:00", "level": "INFO", "agent": "smartport.simulation", "message": "simulation ready: agents=['berth_agent', 'crane_agent', 'yard_agent', 'conflict_agent', 'orchestrator']"}
+{"ts": "2026-08-16T17:52:18.799629+00:00", "level": "INFO", "agent": "smartport.board", "message": "board: [orchestrator] section='phase' updated by 'orchestrator' (v2)"}
+{"ts": "2026-08-16T17:52:18.799629+00:00", "level": "INFO", "agent": "smartport.agent.orchestrator", "message": "=== scheduling cycle start (mode=ga, 6 vessels) ==="}
+{"ts": "2026-08-16T17:52:19.527408+00:00", "level": "INFO", "agent": "smartport.board", "message": "board: [berth_agent] section='berth_plan' updated by 'berth_agent' (v3)"}
+{"ts": "2026-08-16T17:52:19.527408+00:00", "level": "INFO", "agent": "smartport.agent.berth_agent", "message": "berth plan ready: mode=ga vessels=6 solve=0.73s"}
+{"ts": "2026-08-16T17:52:19.528423+00:00", "level": "INFO", "agent": "smartport.board", "message": "board: [orchestrator] section='phase' updated by 'orchestrator' (v4)"}
+{"ts": "2026-08-16T17:52:19.528423+00:00", "level": "INFO", "agent": "smartport.crane", "message": "crane: vessel V002 under-allocated 1/2 cranes"}
+{"ts": "2026-08-16T17:52:19.528423+00:00", "level": "INFO", "agent": "smartport.crane", "message": "crane: borrow back 1 crane(s) to vessel V002"}
+{"ts": "2026-08-16T17:52:19.528423+00:00", "level": "INFO", "agent": "smartport.crane", "message": "crane: vessel V005 under-allocated 1/2 cranes"}
+{"ts": "2026-08-16T17:52:19.528423+00:00", "level": "INFO", "agent": "smartport.crane", "message": "crane: borrow back 1 crane(s) to vessel V005"}
+{"ts": "2026-08-16T17:52:19.528423+00:00", "level": "INFO", "agent": "smartport.crane", "message": "crane: vessel V003 under-allocated 1/2 cranes"}
+{"ts": "2026-08-16T17:52:19.529422+00:00", "level": "INFO", "agent": "smartport.crane", "message": "crane: borrow back 1 crane(s) to vessel V003"}
+{"ts": "2026-08-16T17:52:19.529422+00:00", "level": "INFO", "agent": "smartport.crane", "message": "crane: vessel V004 under-allocated 1/2 cranes"}
+{"ts": "2026-08-16T17:52:19.529422+00:00", "level": "INFO", "agent": "smartport.crane", "message": "crane: borrow back 1 crane(s) to vessel V004"}
+{"ts": "2026-08-16T17:52:19.529422+00:00", "level": "INFO", "agent": "smartport.crane", "message": "crane: vessel V001 under-allocated 1/2 cranes"}
+{"ts": "2026-08-16T17:52:19.529422+00:00", "level": "INFO", "agent": "smartport.crane", "message": "crane: borrow back 1 crane(s) to vessel V001"}
+{"ts": "2026-08-16T17:52:19.529422+00:00", "level": "INFO", "agent": "smartport.board", "message": "board: [crane_agent] section='crane_plan' updated by 'crane_agent' (v5)"}
+{"ts": "2026-08-16T17:52:19.529422+00:00", "level": "INFO", "agent": "smartport.agent.crane_agent", "message": "crane plan ready: assignments=12 crane_moves=6 extended=5"}
+{"ts": "2026-08-16T17:52:19.529422+00:00", "level": "INFO", "agent": "smartport.board", "message": "board: [orchestrator] section='phase' updated by 'orchestrator' (v6)"}
+{"ts": "2026-08-16T17:52:19.529422+00:00", "level": "WARNING", "agent": "smartport.agent.orchestrator", "message": "conflict round 1 on berth B1: V003(end=14.1) overlaps V004(start=12.9)"}
+{"ts": "2026-08-16T17:52:19.529422+00:00", "level": "INFO", "agent": "smartport.agent.conflict_agent", "message": "arbitration on berth B1: winner=V004 loser=V003 method=rule, loser new start = 20.99h"}
+{"ts": "2026-08-16T17:52:19.530940+00:00", "level": "INFO", "agent": "smartport.agent.orchestrator", "message": "execution: shifted 1 vessel(s) on berth B1 by 12.13h"}
+{"ts": "2026-08-16T17:52:19.530940+00:00", "level": "INFO", "agent": "smartport.board", "message": "board: [orchestrator] section='phase' updated by 'orchestrator' (v7)"}
+{"ts": "2026-08-16T17:52:19.543721+00:00", "level": "WARNING", "agent": "smartport.yard", "message": "yard: no bay capacity for V001/export"}
+{"ts": "2026-08-16T17:52:19.543721+00:00", "level": "WARNING", "agent": "smartport.yard", "message": "yard: no bay capacity for V003/import"}
+{"ts": "2026-08-16T17:52:19.544712+00:00", "level": "WARNING", "agent": "smartport.yard", "message": "yard: no bay capacity for V003/export"}
+{"ts": "2026-08-16T17:52:19.552273+00:00", "level": "INFO", "agent": "smartport.board", "message": "board: [yard_agent] section='yard_plan' updated by 'yard_agent' (v8)"}
+{"ts": "2026-08-16T17:52:19.553789+00:00", "level": "INFO", "agent": "smartport.agent.yard_agent", "message": "yard plan ready: vessels=6 reshuffles=924"}
+{"ts": "2026-08-16T17:52:19.553789+00:00", "level": "INFO", "agent": "smartport.board", "message": "board: [orchestrator] section='kpi' updated by 'orchestrator' (v9)"}
+{"ts": "2026-08-16T17:52:19.554804+00:00", "level": "INFO", "agent": "smartport.board", "message": "board: [orchestrator] section='berth_plan' updated by 'orchestrator' (v10)"}
+{"ts": "2026-08-16T17:52:19.554804+00:00", "level": "INFO", "agent": "smartport.board", "message": "board: [orchestrator] section='crane_plan' updated by 'orchestrator' (v11)"}
+{"ts": "2026-08-16T17:52:19.555311+00:00", "level": "INFO", "agent": "smartport.agent.orchestrator", "message": "=== cycle done (mode=ga): avg_port=13.58h max_wait=17.64h reshuffles=924 elapsed=0.8s ==="}
+{"ts": "2026-08-16T17:52:19.555311+00:00", "level": "INFO", "agent": "smartport.agent.orchestrator", "message": "agent stopped"}
+{"ts": "2026-08-16T17:52:19.555311+00:00", "level": "INFO", "agent": "smartport.agent.berth_agent", "message": "agent stopped"}
+{"ts": "2026-08-16T17:52:19.555311+00:00", "level": "INFO", "agent": "smartport.agent.crane_agent", "message": "agent stopped"}
+{"ts": "2026-08-16T17:52:19.555311+00:00", "level": "INFO", "agent": "smartport.agent.yard_agent", "message": "agent stopped"}
+{"ts": "2026-08-16T17:52:19.556327+00:00", "level": "INFO", "agent": "smartport.agent.conflict_agent", "message": "agent stopped"}
+{"ts": "2026-08-16T17:52:19.842240+00:00", "level": "INFO", "agent": "smartport.viz", "message": "saved berth gantt: E:\\GitHub项目\\smartport-multiagent\\examples\\output\\berth_gantt_conflict_demo.png"}
