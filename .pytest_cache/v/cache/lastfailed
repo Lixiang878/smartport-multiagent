@@ -1,0 +1,3 @@
+{
+  "tests/test_bap.py::test_ga_not_worse_than_fcfs": true
+}
