@@ -7,7 +7,7 @@ README = Path(__file__).parent / "README.md"
 
 setup(
     name="smartport-multiagent",
-    version="0.1.0",
+    version="0.2.0",
     description="Multi-agent intelligent scheduling system for container "
                 "terminals: berth allocation, quay crane scheduling, yard "
                 "planning and LLM-enhanced conflict resolution",
@@ -24,7 +24,8 @@ setup(
     ],
     extras_require={
         "solver": ["pulp>=2.7"],
-        "dev": ["pytest>=7.0", "flake8>=6.0", "pulp>=2.7"],
+        "exact": ["scipy>=1.9"],
+        "dev": ["pytest>=7.0", "flake8>=6.0", "pulp>=2.7", "scipy>=1.9"],
     },
     classifiers=[
         "Development Status :: 4 - Beta",

@@ -6,6 +6,9 @@ matplotlib>=3.7
 # 算法求解器（可选：缺失时 MIP 模式自动回退遗传算法）
 pulp>=2.7
 
+# HiGHS 精确解（可选：bap_milp_highs 小规模 ground truth）
+scipy>=1.9
+
 # 开发与测试（可选）
 pytest>=7.0
 flake8>=6.0

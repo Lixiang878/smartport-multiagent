@@ -190,10 +190,26 @@ MIP 求解「纯 BAP 视角」最优（无岸桥容量感知），在全链路�
 ## 8. 目录与测试映射
 
 ```
-tests/test_models.py       数据模型校验与序列化
-tests/test_bap.py          三种 BAP 正确性 / 30s 预算 / 拥堵改进 / 精英保留
-tests/test_crane.py        岸桥并发上限 / 全船服务
-tests/test_yard.py         翻箱计数单元 / 完美堆存零翻箱 / 混堆产生翻箱
-tests/test_bus_agents.py   请求-响应 / 广播 / 端到端闭环 / 多模式对比
-tests/test_llm_fallback.py 无密钥降级 / 决策解析 / 纯规则仲裁
+tests/test_models.py        数据模型校验与序列化
+tests/test_bap.py           四种 BAP 正确性 / 30s 预算 / 拥堵改进 / 精英保留
+tests/test_crane.py         岸桥并发上限 / 全船服务
+tests/test_yard.py          翻箱计数单元 / 完美堆存零翻箱 / 混堆产生翻箱
+tests/test_bus_agents.py    请求-响应 / 广播 / 端到端闭环 / 多模式对比
+tests/test_llm_fallback.py  无密钥降级 / 决策解析 / 纯规则仲裁
+tests/test_benchmarks.py    文献基准算例转录（Imai 风格）
+tests/test_milp_highs.py    HiGHS 精确解可行性 / 不劣于 FCFS（离散松弛内）
+tests/test_sensitivity.py   岸桥数量扫描灵敏度
 ```
+
+## 9. 二合一整合记录（2026-08-20）
+
+原 Berth-Scheduler 仓库（同一问题的算法库变体）已并入本仓库，消除重合：
+
+| 吸收能力 | 落点 | 说明 |
+|---|---|---|
+| HiGHS 精确解 | `algorithms/bap_milp_highs.py` | scipy.optimize.milp 离散时间模型，≤10 船 ground truth；scipy 为可选依赖，缺失时返回明确状态供上层回退 |
+| 文献基准算例 | `utils/benchmarks.py` | imai_5_2 / imai_10_3 / dense_20_5 转录为 Scenario；作业量按 base_handling×2台×30moves/h 映射 |
+| 灵敏度分析 | `utils/sensitivity.py` | 岸桥数量扫描，FCFS vs GA 总在港时间改善曲线 |
+| 对比演示 | `examples/demo_benchmark.py` | 一键输出 FCFS/GA/MIP-HiGHS 指标对比与约束校验 |
+
+Berth-Scheduler 仓库保留为只读归档（README 横幅指向本仓库）。

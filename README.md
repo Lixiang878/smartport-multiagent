@@ -7,10 +7,17 @@
 
 [English README](README_EN.md)
 
+> **二合一说明**：原 [Berth-Scheduler](https://github.com/Lixiang878/Berth-Scheduler) 仓库已并入本项目：
+> **HiGHS 精确解**（`algorithms/bap_milp_highs`，小规模 ground truth）、**文献基准算例**
+> （`utils/benchmarks`，Imai 风格转录）、**灵敏度分析**（`utils/sensitivity`，岸桥数量扫描）。
+> Berth-Scheduler 已归档，不再更新。
+
 ## 核心特性
 
 - **分层多 Agent 架构**：OrchestratorAgent 协调 4 个专业 Agent（泊位分配 / 岸桥调度 / 堆场规划 / 冲突仲裁），任务分解、状态监控、冲突处理
-- **三种泊位分配算法**：FCFS 基准 / 自适应 NSGA-II 遗传算法 / MIP 精确求解（pulp + CBC，带 warm start）
+- **四种泊位分配算法**：FCFS 基准 / 自适应 NSGA-II 遗传算法 / MIP（pulp + CBC，带 warm start）/ **HiGHS 精确解**（scipy.optimize.milp，≤10 船 ground truth，吸收自 Berth-Scheduler）
+- **文献基准对照**：Imai et al. (2001/2005) 风格算例转录（`imai_5_2` / `imai_10_3` / `dense_20_5`），可与公开数字交叉校验；`examples/demo_benchmark.py` 一键对比 FCFS/GA/MIP
+- **灵敏度分析**：岸桥数量扫描，量化加设备的边际收益（`utils/sensitivity`）
 - **异步消息总线**：基于 asyncio Queue 的请求-响应、广播、仲裁三种协作协议，事件驱动
 - **黑板模式状态共享**：全局 ScheduleBoard，各 Agent 订阅/发布状态变更
 - **执行闭环**：Observation → Planning → Execution → Review，每阶段约束校验
@@ -51,6 +58,12 @@ pip install -r requirements.txt   # 或 pip install -e ".[dev]"
 
 ```bash
 python -m examples.demo_basic
+```
+
+### 文献基准对比（吸收自 Berth-Scheduler）
+
+```bash
+python -m examples.demo_benchmark --name imai_5_2   # FCFS/GA/HiGHS 精确解对照
 ```
 
 输出 `examples/output/`：泊位甘特图 `berth_gantt_10v.png`、岸桥时序图
@@ -96,13 +109,13 @@ smartport-multiagent/
 ├── smartport/
 │   ├── core/                 # 数据模型 / 消息总线 / 事件主题 / 黑板
 │   ├── agents/               # 5 个 Agent（orchestrator + 4 专业 Agent）
-│   ├── algorithms/           # FCFS / NSGA-II GA / MIP / 岸桥 / 堆场启发式 / KPI
+│   ├── algorithms/           # FCFS / NSGA-II GA / MIP(pulp) / HiGHS 精确解 / 岸桥 / 堆场启发式 / KPI
 │   ├── visualization/        # 甘特图 / 岸桥时序 / 指标看板 / 对比报告
 │   ├── llm/                  # OpenAI/GLM 兼容客户端 + 仲裁 prompt 模板
-│   ├── utils/                # 日志 / 配置加载 / 算例生成 / 文献算例接口
+│   ├── utils/                # 日志 / 配置加载 / 算例生成 / 文献算例接口 / 文献基准 / 灵敏度分析
 │   └── simulation.py         # PortSimulation 一键组装
 ├── configs/                  # 标准算例（10/40 船）、算法超参、LLM、文献算例
-├── examples/                 # demo_basic / demo_full / demo_llm_conflict
+├── examples/                 # demo_basic / demo_full / demo_llm_conflict / demo_benchmark
 ├── tests/                    # pytest（数据模型 / 算法 / 总线 / Agent 闭环 / LLM 降级）
 ├── docs/                     # API 文档
 ├── ARCHITECTURE.md           # 设计决策与扩展指南
@@ -139,9 +152,12 @@ asyncio.run(main())
 ## 测试
 
 ```bash
-python -m pytest tests/ -q        # 33 个测试：模型/算法/总线/Agent 闭环/LLM 降级
+python -m pytest tests/ -q        # 42 个测试：模型/算法(含 HiGHS)/总线/Agent 闭环/LLM 降级/基准/灵敏度
 python -m flake8 smartport tests examples --max-line-length=100
 ```
+
+> 可选依赖：未装 pulp 时 MIP-CBC 测试自动跳过；未装 scipy 时 HiGHS 测试自动跳过
+> （均为可选 extra：`pip install -e '.[dev]'` 全装）。
 
 ## 简化与边界（如实声明）
 
