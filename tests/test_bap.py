@@ -3,6 +3,8 @@ from __future__ import annotations
 
 import time
 
+import pytest
+
 from smartport.algorithms.bap_common import (
     estimate_service_hours,
     validate_berth_plan,
@@ -99,7 +101,7 @@ def test_ga_solves_40v_within_budget(tmp_path):
 
 def test_mip_warm_start_or_fallback(scenario10):
     """MIP：有 pulp 时应返回可行解或明确回退状态。"""
-    import pulp  # noqa: F401  (环境装有 pulp；无 pulp 环境跳过本测试)
+    pytest.importorskip("pulp")  # pulp 为可选依赖，未安装时跳过本测试
     service = estimate_service_hours(scenario10.vessels)
     fcfs_plan, _ = solve_bap_fcfs(scenario10.vessels, scenario10.berths, service)
     plan, meta = solve_bap_mip(
